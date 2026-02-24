@@ -11,12 +11,12 @@
   <body>
   <h1 id = "loll">stare at the screen for 10 hours</h1>
     <script>
-      
-      document.addEventListener("visibilitychange", () => {
-        if document.visibilityState == "hidden"{
-          document.getElementById("loll").textContent = "You lose!!!";
-        }
+      $(document).ready(() => {
+         $(window).blur(() => {
+            document.getElementById("loll").textContent = "You lose!!!";
+        });
       });
+     
     </script>
   </body>
 </html>
